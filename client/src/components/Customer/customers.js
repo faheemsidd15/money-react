@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import {connect } from 'react-redux';
-import {getCustomers} from '../../store/actions/customer'
+import {getCustomers} from '../../store/actions/customers'
 import './customers.css';
 
 class Customers extends Component {
@@ -25,8 +25,8 @@ class Customers extends Component {
       <div>
         <h2>Customers</h2>
         <ul>
-        {this.props.customers.map(customer =>
-          <li key={customer.id}>{customer.firstName} {customer.lastName}</li>
+        {this.props.customers.map(customers =>
+          <li key={customers.id}>{customers.firstName} {customers.lastname}</li>
         )}
         </ul>
       </div>
